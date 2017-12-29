@@ -1,6 +1,6 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
-from flask import Flask, request
+from flask import Flask, request, current_app
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -9,9 +9,9 @@ from flask_mail import Mail
 import os
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
-from flask_babel import Babel
-from app.errors import bp as errors_bp
-app.register_blueprint(errors_bp)
+from flask_babel import Babel, lazy_gettext as _l
+#from app.errors import bp as errors_bp
+from elasticsearch import Elasticsearch
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -19,16 +19,19 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
-mail = Mail(app)
+login.login_message = _l('Please log in to access this page.')
+mail = Mail()
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
 
-if not app.debug:
+
+if not app.debug and not app.testing:
     if app.config['MAIL_SERVER']:
         auth = None
         if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
-            auth = (app.config['MAIL_USERNAME'], app.config['MAIL_PASSWORD'])
+            auth = (app.config['MAIL_USERNAME'],
+                    app.config['MAIL_PASSWORD'])
         secure = None
         if app.config['MAIL_USE_TLS']:
             secure = ()
@@ -45,7 +48,8 @@ if not app.debug:
         os.mkdir('logs')
     file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
             backupCount=10)
-    # Logger below doesn't work for some reason
+
+        # Logger below doesn't work for some reason
    # file_handler.setFormatter(logging.Formatter(
     #    '%(asctime)s % (levelname)s: %(message)s [in %(pathname)s:%(lineno)d']))
     file_handler.setLevel(logging.INFO)
@@ -54,8 +58,10 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 
-@babel.localeselocator
+
+@babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
-from app import routes, models # <-- removed erros from this import!
+
+from app import routes, models, errors

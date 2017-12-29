@@ -1,0 +1,96 @@
+[2017-12-25T00:59:43,072][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-25T00:59:43,260][INFO ][o.e.e.NodeEnvironment    ] [_dIIOO0] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [5.3gb], net total_space [17.5gb], types [ext4]
+[2017-12-25T00:59:43,261][INFO ][o.e.e.NodeEnvironment    ] [_dIIOO0] heap size [1015.6mb], compressed ordinary object pointers [true]
+[2017-12-25T00:59:43,262][INFO ][o.e.n.Node               ] node name [_dIIOO0] derived from node ID [_dIIOO0lRaO8vLvkLlLPPw]; set [node.name] to override
+[2017-12-25T00:59:43,262][INFO ][o.e.n.Node               ] version[6.1.1], pid[3923], build[bd92e7f/2017-12-17T20:23:25.338Z], OS[Linux/4.10.0-42-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_151/25.151-b12]
+[2017-12-25T00:59:43,262][INFO ][o.e.n.Node               ] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/deeplearning/microblog/elasticsearch-6.1.1, -Des.path.conf=/home/deeplearning/microblog/elasticsearch-6.1.1/config]
+[2017-12-25T00:59:45,059][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [aggs-matrix-stats]
+[2017-12-25T00:59:45,060][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [analysis-common]
+[2017-12-25T00:59:45,064][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [ingest-common]
+[2017-12-25T00:59:45,064][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [lang-expression]
+[2017-12-25T00:59:45,064][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [lang-mustache]
+[2017-12-25T00:59:45,065][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [lang-painless]
+[2017-12-25T00:59:45,065][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [mapper-extras]
+[2017-12-25T00:59:45,065][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [parent-join]
+[2017-12-25T00:59:45,065][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [percolator]
+[2017-12-25T00:59:45,066][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [reindex]
+[2017-12-25T00:59:45,066][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [repository-url]
+[2017-12-25T00:59:45,066][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [transport-netty4]
+[2017-12-25T00:59:45,066][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [tribe]
+[2017-12-25T00:59:45,067][INFO ][o.e.p.PluginsService     ] [_dIIOO0] no plugins loaded
+[2017-12-25T00:59:48,467][INFO ][o.e.d.DiscoveryModule    ] [_dIIOO0] using discovery type [zen]
+[2017-12-25T00:59:50,079][INFO ][o.e.n.Node               ] initialized
+[2017-12-25T00:59:50,079][INFO ][o.e.n.Node               ] [_dIIOO0] starting ...
+[2017-12-25T00:59:50,518][INFO ][o.e.t.TransportService   ] [_dIIOO0] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-12-25T00:59:50,609][WARN ][o.e.b.BootstrapChecks    ] [_dIIOO0] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-12-25T00:59:53,881][INFO ][o.e.c.s.MasterService    ] [_dIIOO0] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {_dIIOO0}{_dIIOO0lRaO8vLvkLlLPPw}{SbhPvt76RPm1OcAAxr7ERg}{127.0.0.1}{127.0.0.1:9300}
+[2017-12-25T00:59:53,897][INFO ][o.e.c.s.ClusterApplierService] [_dIIOO0] new_master {_dIIOO0}{_dIIOO0lRaO8vLvkLlLPPw}{SbhPvt76RPm1OcAAxr7ERg}{127.0.0.1}{127.0.0.1:9300}, reason: apply cluster state (from master [master {_dIIOO0}{_dIIOO0lRaO8vLvkLlLPPw}{SbhPvt76RPm1OcAAxr7ERg}{127.0.0.1}{127.0.0.1:9300} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2017-12-25T00:59:53,978][INFO ][o.e.h.n.Netty4HttpServerTransport] [_dIIOO0] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-12-25T00:59:53,987][INFO ][o.e.n.Node               ] [_dIIOO0] started
+[2017-12-25T00:59:53,989][INFO ][o.e.g.GatewayService     ] [_dIIOO0] recovered [0] indices into cluster_state
+[2017-12-25T08:42:57,316][INFO ][o.e.n.Node               ] [_dIIOO0] stopping ...
+[2017-12-25T08:42:57,380][INFO ][o.e.n.Node               ] [_dIIOO0] stopped
+[2017-12-25T08:42:57,381][INFO ][o.e.n.Node               ] [_dIIOO0] closing ...
+[2017-12-25T08:42:57,394][DEBUG][o.e.a.a.c.n.s.TransportNodesStatsAction] [_dIIOO0] failed to execute on node [_dIIOO0lRaO8vLvkLlLPPw]
+org.elasticsearch.transport.SendRequestTransportException: [_dIIOO0][127.0.0.1:9300][cluster:monitor/nodes/stats[n]]
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:604) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:514) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:502) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:197) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:89) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:52) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:167) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:139) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:81) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.client.node.NodeClient.executeLocally(NodeClient.java:83) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:72) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:405) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.client.support.AbstractClient$ClusterAdmin.execute(AbstractClient.java:712) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.client.support.AbstractClient$ClusterAdmin.nodesStats(AbstractClient.java:808) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:254) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:290) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:275) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$500(InternalClusterInfoService.java:68) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob.lambda$run$0(InternalClusterInfoService.java:222) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:568) ~[elasticsearch-6.1.1.jar:6.1.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+Caused by: org.elasticsearch.transport.TransportException: TransportService is closed stopped can't send request
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:588) ~[elasticsearch-6.1.1.jar:6.1.1]
+	... 22 more
+[2017-12-25T08:42:57,448][INFO ][o.e.n.Node               ] [_dIIOO0] closed
+[2017-12-25T08:43:08,290][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-25T08:43:08,529][INFO ][o.e.e.NodeEnvironment    ] [_dIIOO0] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [5.3gb], net total_space [17.5gb], types [ext4]
+[2017-12-25T08:43:08,529][INFO ][o.e.e.NodeEnvironment    ] [_dIIOO0] heap size [1015.6mb], compressed ordinary object pointers [true]
+[2017-12-25T08:43:08,537][INFO ][o.e.n.Node               ] node name [_dIIOO0] derived from node ID [_dIIOO0lRaO8vLvkLlLPPw]; set [node.name] to override
+[2017-12-25T08:43:08,538][INFO ][o.e.n.Node               ] version[6.1.1], pid[7986], build[bd92e7f/2017-12-17T20:23:25.338Z], OS[Linux/4.10.0-42-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_151/25.151-b12]
+[2017-12-25T08:43:08,538][INFO ][o.e.n.Node               ] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/deeplearning/microblog/elasticsearch-6.1.1, -Des.path.conf=/home/deeplearning/microblog/elasticsearch-6.1.1/config]
+[2017-12-25T08:43:10,248][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [aggs-matrix-stats]
+[2017-12-25T08:43:10,253][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [analysis-common]
+[2017-12-25T08:43:10,253][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [ingest-common]
+[2017-12-25T08:43:10,253][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [lang-expression]
+[2017-12-25T08:43:10,253][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [lang-mustache]
+[2017-12-25T08:43:10,253][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [lang-painless]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [mapper-extras]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [parent-join]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [percolator]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [reindex]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [repository-url]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [transport-netty4]
+[2017-12-25T08:43:10,254][INFO ][o.e.p.PluginsService     ] [_dIIOO0] loaded module [tribe]
+[2017-12-25T08:43:10,255][INFO ][o.e.p.PluginsService     ] [_dIIOO0] no plugins loaded
+[2017-12-25T08:43:13,389][INFO ][o.e.d.DiscoveryModule    ] [_dIIOO0] using discovery type [zen]
+[2017-12-25T08:43:14,644][INFO ][o.e.n.Node               ] initialized
+[2017-12-25T08:43:14,644][INFO ][o.e.n.Node               ] [_dIIOO0] starting ...
+[2017-12-25T08:43:14,977][INFO ][o.e.t.TransportService   ] [_dIIOO0] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-12-25T08:43:15,038][WARN ][o.e.b.BootstrapChecks    ] [_dIIOO0] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-12-25T08:43:18,518][INFO ][o.e.c.s.MasterService    ] [_dIIOO0] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {_dIIOO0}{_dIIOO0lRaO8vLvkLlLPPw}{m2rdeWDXSUaHU0efAHbcYw}{127.0.0.1}{127.0.0.1:9300}
+[2017-12-25T08:43:18,688][INFO ][o.e.c.s.ClusterApplierService] [_dIIOO0] new_master {_dIIOO0}{_dIIOO0lRaO8vLvkLlLPPw}{m2rdeWDXSUaHU0efAHbcYw}{127.0.0.1}{127.0.0.1:9300}, reason: apply cluster state (from master [master {_dIIOO0}{_dIIOO0lRaO8vLvkLlLPPw}{m2rdeWDXSUaHU0efAHbcYw}{127.0.0.1}{127.0.0.1:9300} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2017-12-25T08:43:18,967][INFO ][o.e.h.n.Netty4HttpServerTransport] [_dIIOO0] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-12-25T08:43:18,970][INFO ][o.e.n.Node               ] [_dIIOO0] started
+[2017-12-25T08:43:19,084][INFO ][o.e.g.GatewayService     ] [_dIIOO0] recovered [0] indices into cluster_state
+[2017-12-25T08:46:46,739][INFO ][o.e.n.Node               ] [_dIIOO0] stopping ...
+[2017-12-25T08:46:46,797][INFO ][o.e.n.Node               ] [_dIIOO0] stopped
+[2017-12-25T08:46:46,797][INFO ][o.e.n.Node               ] [_dIIOO0] closing ...
+[2017-12-25T08:46:46,843][INFO ][o.e.n.Node               ] [_dIIOO0] closed
