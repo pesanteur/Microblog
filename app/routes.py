@@ -5,6 +5,7 @@ from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm, Re
 from app.email import send_email, send_password_reset_email
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Post
+from guess_language import guess_language
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -12,6 +13,9 @@ from app.models import User, Post
 def index():
     form = PostForm()
     if form.validate_on_submit():
+        language = guess_language(form.post.data)
+        if language == 'UNKNOWN' or len(language) > 5:
+            language = ''
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
