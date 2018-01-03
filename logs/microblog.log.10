@@ -1,4 +1,4 @@
-Exception on /explore [GET]
+Exception on /index [GET]
 Traceback (most recent call last):
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/deeplearning/microblog/app/routes.py", line 153, in explore
-    next_url=next_url, prev_url=prev_url)
+  File "/home/deeplearning/microblog/app/routes.py", line 37, in index
+    prev_url=prev_url)
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 133, in render_template
     return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
@@ -33,7 +33,7 @@ Traceback (most recent call last):
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
   File "/home/deeplearning/microblog/app/templates/index.html", line 11, in template
-    {% include '_post.html' %}
+    {% include '_post.html'%}
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 497, in _parse
     return Parser(self, source, name, encode_filename(filename)).parse()
   File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 901, in parse

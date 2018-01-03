@@ -1,118 +1,110 @@
-Exception on /user/susan [GET]
+Exception on /index [GET]
 Traceback (most recent call last):
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
     raise value
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/deeplearning/microblog/app/routes.py", line 69, in user
-    return render_template('user.html', user=user, posts=posts)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 133, in render_template
+  File "/home/deeplearning/microblog/app/routes.py", line 37, in index
+    posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 133, in render_template
     return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
     return self.get_template(template_name_or_list, parent, globals)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
     return self._load_template(name, self.make_globals(globals))
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
     template = self.loader.load(self, name, globals)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
     code = environment.compile(source, name, filename)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
     self.handle_exception(exc_info, source_hint=source_hint)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/deeplearning/microblog/app/templates/user.html", line 12, in template
-    {% elif not current_user.is_following(user) %}
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+  File "/home/deeplearning/microblog/app/templates/index.html", line 15, in template
+    <a href="{{ prev_url or '#' }}">
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 497, in _parse
     return Parser(self, source, name, encode_filename(filename)).parse()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 901, in parse
     result = nodes.Template(self.subparse(), lineno=1)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 883, in subparse
     rv = self.parse_statement()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 130, in parse_statement
     return getattr(self, 'parse_' + self.stream.current.value)()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 268, in parse_block
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 268, in parse_block
     node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 165, in parse_statements
     result = self.subparse(end_tokens)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 144, in parse_statement
-    self.fail_unknown_tag(token.value, token.lineno)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 97, in fail_unknown_tag
-    return self._fail_ut_eof(name, self._end_token_stack, lineno)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 90, in _fail_ut_eof
-    self.fail(' '.join(message), lineno)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 59, in fail
-    raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'elif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
-Exception on /user/susan [GET]
-Traceback (most recent call last):
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/deeplearning/microblog/app/routes.py", line 69, in user
-    return render_template('user.html', user=user, posts=posts)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 133, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/home/deeplearning/microblog/app/templates/user.html", line 12, in template
-    {% elif not current_user.is_following(user) %}
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 268, in parse_block
-    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 144, in parse_statement
-    self.fail_unknown_tag(token.value, token.lineno)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 97, in fail_unknown_tag
-    return self._fail_ut_eof(name, self._end_token_stack, lineno)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 90, in _fail_ut_eof
-    self.fail(' '.join(message), lineno)
-  File "/home/deeplearning/microblog/venv/lib/python3.6/site-packages/jinja2/parser.py", line 59, in fail
-    raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'elif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 547, in parse_unary
+    node = self.parse_postfix(node)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 676, in parse_postfix
+    node = self.parse_call(node)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 790, in parse_call
+    args.append(self.parse_expression())
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/parser.py", line 564, in parse_primary
+    next(self.stream)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/jinja2/lexer.py", line 739, in tokeniter
+    name, filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected char '#' at 501
+Microblog startup
