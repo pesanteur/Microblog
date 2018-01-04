@@ -80,3 +80,40 @@ Traceback (most recent call last):
     self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: expected token ',', got '_post'
 Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Exception on /index [POST]
+Traceback (most recent call last):
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/deeplearning/microblog/app/routes.py", line 26, in index
+    db.session.commit()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 921, in commit
+    self.transaction.commit()
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 468, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/sqlalchemy/event/attr.py", line 218, in __call__
+    fn(*args, **kw)
+  File "/home/deeplearning/microblog/app/models.py", line 107, in after_commit
+    add_to_index(cls.__tablename__, obj)
+  File "/home/deeplearning/microblog/app/search.py", line 4, in add_to_index
+    if not current_app.elasticsearch:
+  File "/home/deeplearning/microblog/venv/lib/python3.5/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
